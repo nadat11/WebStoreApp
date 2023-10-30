@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
+// THIS BEAN COMUNICATES WITH INMEMORY DATA BASE
 @Configuration
 @ComponentScan("/com.packt.webstore")
 public class RootApplicationContextConfig {

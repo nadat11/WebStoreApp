@@ -9,6 +9,7 @@ public class DispatcherServletInitializer extends AbstractAnnotationConfigDispat
 		return null;
 	}
 
+	// FOR SPRING TO INITIALIZATE BEANS FROM CONFIGURATION DATA FILES
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		

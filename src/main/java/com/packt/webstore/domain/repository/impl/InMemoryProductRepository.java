@@ -15,6 +15,8 @@ import org.springframework.stereotype.Repository;
 import com.packt.webstore.domain.Product;
 import com.packt.webstore.domain.repository.ProductRepository;
 
+
+// RETRIVES DATA FROM INMEMORY DATA BASE
 @Repository
 public class InMemoryProductRepository implements ProductRepository{
 
@@ -49,5 +51,14 @@ public class InMemoryProductRepository implements ProductRepository{
 			return product;
 		}
 		
+	}
+
+	@Override
+	public void updateStock(String productId, long noOfUnits) {
+	String SQL = "UPDATE PRODUCTS SET UNITS_IN_STOCK = :unitsInStock WHERE ID = :id";
+	Map<String, Object> params = new HashMap<>();
+	params.put("unitsInStock", noOfUnits);
+	params.put("id", productId);
+	jdbcTemplate.update(SQL, params);
 	}
 }
